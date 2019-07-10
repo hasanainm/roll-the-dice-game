@@ -40,6 +40,19 @@ document.querySelector('.btn-roll').addEventListener('click', function() {
 
     document.getElementById('current-0').textContent = '0';
     document.getElementById('current-1').textContent = '0';
+
+    document.querySelector(".player-0-panel").classList.toggle('active');
+    document.querySelector(".player-1-panel").classList.toggle('active');
   }
 
+})
+
+
+// as soon as the user hits the hold button
+document.querySelector('.btn-hold').addEventListener('click', function(){
+  // add the current score to the global score
+  scores[activePlayer] += roundScore;
+  scores[activePlayer] = roundScore;
+  // then update the UI
+  // check if the player won the game
 })
